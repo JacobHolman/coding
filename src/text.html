@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    @keyframes move {
+      0% { left: 0; top: 0; }
+      100% { left: 100%; top: 100%; }
+    }
+    h1 {
+      position: absolute;
+      animation: move 5s;
+    }
+  </style>
+  <script>
+    function changePosition() {
+      var h1Element = document.querySelector('h1');
+      var windowWidth = window.innerWidth;
+      var windowHeight = window.innerHeight;
+      var newPositionX = Math.floor(Math.random() * (windowWidth - 100));
+      var newPositionY = Math.floor(Math.random() * (windowHeight - 50));
+
+      h1Element.style.left = newPositionX + 'px';
+      h1Element.style.top = newPositionY + 'px';
+    }
+    setInterval(changePosition, 1000);
+  </script>
+</head>
+<body>
+  <h1>fucking</h1>
+</body>
+</html>
